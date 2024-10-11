@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensieri che fanno sognare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Great Vibes', cursive;
+            margin: 0;
+            padding: 0;
+            color: #f5f5f5; /* Testo chiaro per risaltare sullo sfondo nero */
+        }
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        h1 {
+            font-size: 72px;
+            color: #f5f5f5; /* Colore del testo del titolo */
+            margin-bottom: 20px;
+        }
+        .quote-of-the-day {
+            margin-top: 30px;
+            font-size: 36px;
+            color: #ddd; /* Colore chiaro per risaltare */
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #6b4226;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Great Vibes', cursive;
+        }
+        button:hover {
+            background-color: #4a3627;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pensieri che fanno sognare</h1>
+        
+        <div class="quote-of-the-day">
+            <p id="quote">"Non è la destinazione, ma il viaggio che conta." - Ralph Waldo Emerson</p>
+        </div>
+
+        <button onclick="showRandomQuote()">Mostra una citazione casuale</button>
+    </div>
+
+    <script>
+        const quotes = [
+            { text: "Chi si conosce, conosce anche gli altri.", author: "Michel de Montaigne" },
+            { text: "Il corpo è la prigione dell'anima.", author: "Platone" },
+            { text: "Ciò che non mi uccide mi rende più forte.", author: "Friedrich Nietzsche" },
+            { text: "La virtù è una disposizione acquisita di fare il bene.", author: "Aristotele" },
+            { text: "Essere è essere percepito.", author: "George Berkeley" },
+            { text: "Il dubbio è l'inizio della saggezza.", author: "Cartesio" },
+            { text: "Tutto scorre, nulla sta fermo.", author: "Eraclito" },
+            { text: "La vita è un sogno dal quale ci si sveglia morendo.", author: "Lev Tolstoj" },
+            { text: "Chi ha un perché per vivere può sopportare quasi ogni come.", author: "Friedrich Nietzsche" },
+            { text: "Il sapere è potere.", author: "Francis Bacon" },
+            { text: "La bellezza è una promessa di felicità.", author: "Stendhal" },
+            { text: "Le idee governano il mondo.", author: "Platone" },
+            { text: "La giustizia è l'interesse del più forte.", author: "Platone" },
+            { text: "L'uomo è condannato a essere libero.", author: "Jean-Paul Sartre" },
+            { text: "Sapere di non sapere, questa è la vera saggezza.", author: "Socrate" },
+            { text: "Chi smette di imparare è vecchio, che abbia venti o ottant'anni.", author: "Henry Ford" },
+            { text: "La felicità dipende da noi stessi.", author: "Aristotele" },
+            { text: "L'uomo è ciò che mangia.", author: "Ludwig Feuerbach" },
+            { text: "La religione è l'oppio dei popoli.", author: "Karl Marx" },
+            { text: "La speranza è il sogno di un uomo sveglio.", author: "Aristotele" },
+            { text: "La felicità non è uno stato da raggiungere, ma un modo di viaggiare.", author: "Margaret Lee Runbeck" },
+            { text: "L'arte è una bugia che ci fa realizzare la verità.", author: "Pablo Picasso" },
+            { text: "Non esiste vento favorevole per il marinaio che non sa dove andare.", author: "Seneca" },
+            { text: "Siamo fatti della stessa sostanza dei sogni.", author: "William Shakespeare" },
+            { text: "La verità è raramente pura e mai semplice.", author: "Oscar Wilde" },
+            { text: "La poesia è l'eco della melodia dell'universo nel cuore degli uomini.", author: "Khalil Gibran" },
+            { text: "È meglio essere odiati per ciò che si è che essere amati per ciò che non si è.", author: "André Gide" },
+            { text: "Non contare i giorni, fai sì che i giorni contino.", author: "Muhammad Ali" },
+            { text: "L'unico modo per fare un ottimo lavoro è amare ciò che fai.", author: "Steve Jobs" }
+        ];
+
+        function showRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote").innerHTML = `"${randomQuote.text}" - ${randomQuote.author}`;
+        }
+    </script>
+
+</body>
+</html>
